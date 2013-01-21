@@ -1,3 +1,3 @@
-ActionController::Routing::Routes.draw do |map|
-  map.connect "/roadmaps", :controller => "roadmaps_main", :action => "index", :conditions => { :method => :get}
+RedmineApp::Application.routes.draw do
+  match '/roadmaps/:action', :controller => 'roadmaps_main', :via => 'get'
 end
